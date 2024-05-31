@@ -18,11 +18,31 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/', async (req, res) => {
-    const {almaqru, alnext} = req.body
-    console.log(almaqru, alnext)
-    const cretePost = await db.from('bookmark').insert({almaqru, alnext})
+    const {
+        kitab,
+        time,
+        location,
+        almaqru,
+        almaqru_page,
+        almaqru_srh_page,
+        alnext,
+        alnext_page,
+        alnext_srh_page,
+    } = req.body
+    const createPost = await db.from('bookmark').insert({
+        kitab,
+        time,
+        location,
+        almaqru,
+        almaqru_page,
+        almaqru_srh_page,
+        alnext,
+        alnext_page,
+        alnext_srh_page,
+    })
+    console.log(createPost)
 
-    res.send(cretePost)
+    res.json(createPost)
 })
 
 app.listen('1999', () => {
