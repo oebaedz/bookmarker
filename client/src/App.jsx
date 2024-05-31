@@ -21,8 +21,8 @@ function App() {
     <>
       <Layout title={'Bookmark Kajian Al-Insijam'}>
         <div className="flex flex-col my-4 gap-2 items-center">
-          <Link to="/add" className="px-10 py-2 rounded-xl bg-green-300">Tambah Bookmark</Link>
-          <Cards bookmark={bookmark} />
+          <Link to="/add" className="px-10 py-2 rounded-xl bg-green-300 hover:bg-green-400">Tambah Bookmark</Link>
+          {<Cards bookmark={bookmark} /> || <Skeleton containerClassName='flex-1'/>}
         </div>
       </Layout>
     </>
