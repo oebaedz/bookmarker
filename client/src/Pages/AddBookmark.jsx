@@ -29,8 +29,6 @@ const AddBookmark = () => {
                 "Content-Type": 'application/json'
             }
         })
-        Navigate(to('/'))
-        console.log(req)
     }
 
     return (
@@ -46,13 +44,6 @@ const AddBookmark = () => {
                         <option name="male">Fathul Qarib</option>
                         <option name="female">Minhajul Abidin</option>
                     </select>
-                    {/* <input
-                        type='text'
-                        placeholder='Nama Kitab'
-                        className='text-sm py-1 px-3 rounded-xl ring-green-700 ring-1'
-                        name='kitab'
-                        defaultValue={values.kitab}
-                        onChange={handleChange} />  */}
                     <input
                         type='date'
                         className='text-sm py-1 px-3 rounded-xl ring-green-700 ring-1'
@@ -76,7 +67,7 @@ const AddBookmark = () => {
                         onChange={handleChange} />
                     <input
                         type='number'
-                        placeholder='Halaman kitab yang dibaca'
+                        placeholder={`Halaman ${values.kitab} yang dibaca`}
                         className='text-sm py-1 px-3 rounded-xl ring-green-700 ring-1'
                         name='almaqru_page'
                         defaultValue={values.almaqru_page}
@@ -110,7 +101,7 @@ const AddBookmark = () => {
                         name='alnext_srh_page'
                         defaultValue={values.alnext_srh_page}
                         onChange={handleChange} />
-                    <button type='submit' className='bg-green-300 hover:bg-green-400 rounded-xl py-2'>Tambah</button>
+                    <button className='bg-green-300 hover:bg-green-400 rounded-xl py-2'>Tambah</button>
                     <Link to='/' className='bg-gray-400 hover:bg-gray-500 rounded-xl py-2 text-center'>
                         Cancel
                     </Link>

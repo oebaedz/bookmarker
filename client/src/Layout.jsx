@@ -1,7 +1,7 @@
 const Layout = ({ children, title }) => {
     return (
         <>
-            <div className="w-full flex flex-col relative min-h-screen">
+            <div className="w-full flex flex-col pb-20">
                 <header className="text-3xl bg-green-400 text-center font-bold py-3">
                     {title}
                 </header>
