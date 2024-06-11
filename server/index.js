@@ -3,7 +3,7 @@ const supabase = require('@supabase/supabase-js')
 const cors = require('cors')
 
 const app = express()
-const PORT = 1999 || process.env.PORT
+const PORT = 1999
 app.use(express.json())
 app.use(cors())
 
